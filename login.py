@@ -7,7 +7,9 @@ subscription_id =
 from azure.mgmt.resource import ResourceManagementClient
 resource_client = ResourceManagementCLient(credentail , subscription_id)
 
+RGname = "chayandeokar"
+
 # create Resource Group with name and location 
 rg_result = resource_client.resource_group.create_or_update(
-    "chayandeokar" , { "location" : "westus2" }
+    RGname , { "location" : "westus2" }
 )
